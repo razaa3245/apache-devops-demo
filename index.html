@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
 <style>
-:root{--bg:#FFFFFF;--panel:#141a33;--line:#262e55;--ink:#e8ecff;--mute:#8b93b8;--pass:#3ee0c5;--fail:#ff5d73;--ship:#ffb547;--sans:'Bricolage Grotesque',system-ui,sans-serif;--mono:'IBM Plex Mono',Consolas,monospace}
+:root{--bg:#F7F8FC;--panel:#FFFFFF;--line:#DCE3EE;--ink:#172238;--mute:#5E6B82;--pass:#087F8C;--fail:#D9485F;--ship:#B86A08;--sans:'Bricolage Grotesque',system-ui,sans-serif;--mono:'IBM Plex Mono',Consolas,monospace}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.6;overflow-x:hidden}
@@ -23,7 +23,7 @@ section{max-width:1080px;margin:0 auto;padding:110px 24px}
 .l1{color:var(--fail)}.l2{color:var(--pass)}.l3{color:var(--ship)}
 .hero p{max-width:480px;margin-top:28px;color:var(--mute);font-size:1.15rem}
 .stack{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
-.chip{font-family:var(--mono);font-size:.78rem;border:1px solid var(--line);background:rgba(20,26,51,.7);padding:5px 12px;border-radius:99px;color:var(--mute)}
+.chip{font-family:var(--mono);font-size:.78rem;border:1px solid var(--line);background:rgba(255,255,255,.88);padding:5px 12px;border-radius:99px;color:var(--mute)}
 h2{font-size:clamp(2rem,5vw,3.4rem);letter-spacing:-.03em;line-height:1.05;margin-bottom:14px}
 .sub{color:var(--mute);max-width:560px;margin-bottom:54px}
 .tl{position:relative;padding-left:56px}
@@ -32,7 +32,7 @@ h2{font-size:clamp(2rem,5vw,3.4rem);letter-spacing:-.03em;line-height:1.05;margi
 .step{position:relative;margin-bottom:34px;opacity:.35;transition:opacity .5s}
 .step.on{opacity:1}
 .step b.n{position:absolute;left:-56px;top:0;width:36px;height:36px;border-radius:50%;background:var(--bg);border:2px solid var(--line);display:grid;place-items:center;font-family:var(--mono);font-size:.85rem;transition:.4s}
-.step.on b.n{border-color:var(--pass);background:var(--pass);color:var(--bg)}
+.step.on b.n{border-color:var(--pass);background:var(--pass);color:#FFFFFF}
 .step h3{font-size:1.3rem;letter-spacing:-.01em}
 .step p{color:var(--mute);font-size:.98rem}
 .step code,.sub code{font-family:var(--mono);font-size:.85rem;color:var(--ship)}
@@ -42,21 +42,21 @@ h2{font-size:clamp(2rem,5vw,3.4rem);letter-spacing:-.03em;line-height:1.05;margi
 .stage b{display:block;font-size:1rem}
 .stage span{font-family:var(--mono);font-size:.72rem;color:var(--mute)}
 .stage::after{content:'';position:absolute;left:0;bottom:0;height:3px;width:100%;background:var(--line);transition:.4s}
-.stage[data-s=run]{background:#1c2450}.stage[data-s=run]::after{background:var(--ship);animation:pulse .7s infinite alternate}
+.stage[data-s=run]{background:#FFF2D9}.stage[data-s=run]::after{background:var(--ship);animation:pulse .7s infinite alternate}
 .stage[data-s=pass]::after{background:var(--pass)}
-.stage[data-s=fail]{background:#3a1626;border-color:var(--fail)}.stage[data-s=fail]::after{background:var(--fail)}
+.stage[data-s=fail]{background:#FDE8EC;border-color:var(--fail)}.stage[data-s=fail]::after{background:var(--fail)}
 .stage[data-s=held] {opacity:.55}
 @keyframes pulse{to{opacity:.3}}
 .lab{display:grid;grid-template-columns:1fr 1fr;gap:18px}
 .box{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px;font-family:var(--mono);font-size:.82rem;min-height:210px}
 .box h4{font-family:var(--sans);font-size:.9rem;color:var(--mute);margin-bottom:10px;font-weight:500}
-.box pre{white-space:pre-wrap;color:#c9d1ff}
-.bad{background:rgba(255,93,115,.18);color:var(--fail);display:inline-block;width:100%}
+.box pre{white-space:pre-wrap;color:#26364F}
+.bad{background:rgba(217,72,95,.14);color:var(--fail);display:inline-block;width:100%}
 .log div{margin-bottom:4px;color:var(--mute)}.log .ok{color:var(--pass)}.log .er{color:var(--fail)}.log .in{color:var(--ink)}
 .btns{display:flex;gap:12px;margin-top:22px;flex-wrap:wrap}
 button{font:700 1rem var(--sans);padding:13px 26px;border-radius:12px;border:0;cursor:pointer;transition:transform .15s,opacity .2s}
 button:hover:not(:disabled){transform:translateY(-2px)}button:disabled{opacity:.4;cursor:wait}
-#bBreak{background:var(--fail);color:#fff}#bFix{background:var(--pass);color:var(--bg)}
+#bBreak{background:var(--fail);color:#FFFFFF}#bFix{background:var(--pass);color:#FFFFFF}
 .todo{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:26px}
 .card:nth-child(1){border-top:3px solid var(--fail)}.card:nth-child(2){border-top:3px solid var(--pass)}.card:nth-child(3){border-top:3px solid var(--ship)}
@@ -134,13 +134,13 @@ function initScene(){
  var cv=$('#bg'),R=new THREE.WebGLRenderer({canvas:cv,antialias:true,alpha:true});
  R.setPixelRatio(Math.min(window.devicePixelRatio,2));
  var sc=new THREE.Scene(),cam=new THREE.PerspectiveCamera(55,1,.1,100);cam.position.z=9;
- var col=new THREE.Color(0x3ee0c5);
+ var col=new THREE.Color(0x087F8C);
  var mk=function(o){return new THREE.MeshBasicMaterial(Object.assign({color:col,wireframe:true,transparent:true},o))};
  var core=new THREE.Mesh(new THREE.IcosahedronGeometry(2.4,1),mk({opacity:.3}));
  var inner=new THREE.Mesh(new THREE.OctahedronGeometry(1.1,0),mk({opacity:.9}));
  var ring=new THREE.Mesh(new THREE.TorusGeometry(4,.014,8,200),mk({wireframe:false,opacity:.6}));
  ring.rotation.x=1.2;
- var packet=new THREE.Mesh(new THREE.SphereGeometry(.16,16,16),new THREE.MeshBasicMaterial({color:0xffb547}));
+ var packet=new THREE.Mesh(new THREE.SphereGeometry(.16,16,16),new THREE.MeshBasicMaterial({color:0xB86A08}));
  var grp=new THREE.Group();grp.add(core,inner,ring,packet);sc.add(grp);
  var N=900,pos=new Float32Array(N*3),i,r,t,u;
  for(i=0;i<N;i++){r=5+Math.random()*10;t=Math.random()*6.283;u=Math.acos(2*Math.random()-1);
@@ -193,7 +193,7 @@ function log(t,c){var d=document.createElement('div');d.className=c||'';d.textCo
 async function run(broken){
  if(busy)return;busy=true;$('#bBreak').disabled=$('#bFix').disabled=true;
  setCode(broken);$('#log').innerHTML='';stages.forEach(function(s){delete s.dataset.s});
- tint(0xffb547,3);
+ tint(0xB86A08,3);
  var steps=[
   ['commit','$ git push origin main','in'],
   ['repo','GitHub received the commit and started deploy.yml','in'],
@@ -206,11 +206,11 @@ async function run(broken){
    st('test','fail');log('Test failed: <h1> is closed by </p> on line 7','er');
    st('deploy','held');st('live','held');
    log('Deploy skipped. localhost still serves the last good version.','er');
-   tint(0xff5d73,.15);busy=false;$('#bBreak').disabled=$('#bFix').disabled=false;return}
+   tint(0xD9485F,.15);busy=false;$('#bBreak').disabled=$('#bFix').disabled=false;return}
   st(s[0],'pass');
   log(s[0]==='test'?'Test passed: HTML is valid':s[1].replace(/&lt;/g,'<').replace(/&gt;/g,'>'),s[0]==='test'?'ok':s[2]);
  }
- tint(0x3ee0c5,1);busy=false;$('#bBreak').disabled=$('#bFix').disabled=false;
+ tint(0x087F8C,1);busy=false;$('#bBreak').disabled=$('#bFix').disabled=false;
 }
 $('#bBreak').addEventListener('click',function(){run(true)});
 $('#bFix').addEventListener('click',function(){run(false)});
